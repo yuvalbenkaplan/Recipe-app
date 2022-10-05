@@ -1,11 +1,11 @@
 const cloudinary = require("../middleware/cloudinary");
-const Post = require("../models/Recipe");
+const Recipe = require("../models/Recipe");
 
 
 module.exports = {
   getProfile: async (req, res) => {
     try {
-      const posts = await Recipe.find({ user: req.user.id });
+      const recipes = await Recipe.find({ user: req.user.id });
       res.render("profile.ejs", { recipes: recipes, user: req.user });
     } catch (err) {
       console.log(err);
