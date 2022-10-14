@@ -21,17 +21,21 @@ const RecipeSchema = new mongoose.Schema({
     type: String,
     required: true,
   },
-  image: {
+  vegetarian: {
     type: String,
     require: true,
+  },
+  vegan: {
+    type: String,
+    require: true,
+  },
+  image: {
+    type: String,
+    require: false,
   },
   cloudinaryId: {
     type: String,
     require: true,
-  },
-  caption: {
-    type: String,
-    required: true,
   },
   user: {
     type: mongoose.Schema.Types.ObjectId,
