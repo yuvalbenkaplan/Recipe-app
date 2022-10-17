@@ -8,20 +8,26 @@
 
 `npm start`
 
+`node server.js`
+
 ---
 
 
 # Backend to add
-- links to pages
-- create recipe
+- browse page
+- search functionality
 
 # Backend added
-- basc MVC architecture, routes, controllers, and views
+- basic MVC architecture, routes, controllers, and views
+- create recipe
+- add recipe to favorites
 
 # Frontend to add
 - styling
-- create recipe form
-- profile
+- recipe details formatting
+- 
 
 # Frontend added
-
+- profile
+- individual recipe page
+- favorites
