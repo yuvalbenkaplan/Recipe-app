@@ -9,7 +9,7 @@ const flash = require("express-flash");
 const logger = require("morgan");
 const connectDB = require("./config/database");
 const mainRoutes = require("./routes/main");
-const recipeRoutes = require("./routes/recipes");
+const recipeRoutes = require("./routes/recipe");
 
 
 //Use .env file in config folder

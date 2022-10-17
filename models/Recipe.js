@@ -1,7 +1,7 @@
 const mongoose = require("mongoose");
 
 const RecipeSchema = new mongoose.Schema({
-  title: {
+  name: {
     type: String,
     required: true,
   },
@@ -13,22 +13,22 @@ const RecipeSchema = new mongoose.Schema({
     type: String,
     required: true,
   },
-  cookTime: {
-    type: String,
-    required: true,
-  },
-  prepTime: {
-    type: String,
-    required: true,
-  },
-  vegetarian: {
-    type: String,
-    require: true,
-  },
-  vegan: {
-    type: String,
-    require: true,
-  },
+  // cookTime: {
+  //   type: String,
+  //   required: true,
+  // },
+  // prepTime: {
+  //   type: String,
+  //   required: true,
+  // },
+  // vegetarian: {
+  //   type: String,
+  //   require: true,
+  // },
+  // vegan: {
+  //   type: String,
+  //   require: true,
+  // },
   image: {
     type: String,
     require: false,

@@ -6,16 +6,17 @@
               <p><strong>User Name</strong>: <%= user.userName %></p>
               <p><strong>Email</strong>: <%= user.email %></p>
               <a href="/browse" class="col-3 btn btn-primary">Browse recipes</a>
+              <a href="/favorites" class="col-3 btn btn-primary">Favorite recipes</a>
               <a href="/logout" class="col-3 btn btn-primary">Logout</a>
           </div>
           <div class="mt-5">
             <h2>Add a recipe</h2>
             <form action="/recipe/createRecipe" enctype="multipart/form-data" method="POST">
               <div class="mb-3">
-                  <label for="title" class="form-label">Title</label>
-                  <input type="text" class="form-control" id="title" name="title">
+                  <label for="name" class="form-label">Recipe name</label>
+                  <input type="text" class="form-control" id="name" name="name">
               </div>
-              <div class="mb-3">
+              <!-- <div class="mb-3">
                 <label for="prepTime" class="form-label">Prep time</label>
                 <input type="text" class="form-control" id="prepTime" name="prepTime">
               </div>
@@ -40,7 +41,7 @@
                     <option value="vegan">Vegan</option>
                     <option value="optional">Optional</option>                    
                   </select>
-              </div>
+              </div> -->
               <div class="mb-3">
                 <label for="ingredients" class="form-label">Ingredients</label>
                 <textarea class="form-control" id="ingredients" name="ingredients"></textarea>
@@ -59,16 +60,20 @@
       </div>
       <div class="col-6">
         <ul class="row list-unstyled">
-        <% for(var i=0; i<recipes.length; i++) {%>
-          <li class="col-6 justify-content-between mt-5">
-            <a href="/recipe/<%= recipes[i]._id%>">
-              <img class="img-fluid" src="<%= recipes[i].image%>">
-            </a>
-          </li>
-        <% } %>
-        </ul>
-      </div>  
+          <% for(var i=0; i<recipes.length; i++) {%>
+            <li class="col-6 justify-content-between mt-5">
+              <a href="/recipe/<%= recipes[i]._id%>">
+                <h2><%= recipes[i].name%></h2>
+                <img class="img-fluid" src="<%= recipes[i].image%>">
+                <p><%= recipes[i].ingredients%></p>
+                <p><%= recipes[i].directions%></p>
+              </a>
+            </li>
+          <% } %>
+          </ul>
+          
+        </div>  
+      </div>
     </div>
   </div>
-</div>
-<%- include('partials/footer') -%>
+  <%- include('partials/footer') -%>
