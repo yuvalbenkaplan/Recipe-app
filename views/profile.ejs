@@ -16,7 +16,7 @@
                   <label for="name" class="form-label">Recipe name</label>
                   <input type="text" class="form-control" id="name" name="name">
               </div>
-              <!-- <div class="mb-3">
+              <div class="mb-3">
                 <label for="prepTime" class="form-label">Prep time</label>
                 <input type="text" class="form-control" id="prepTime" name="prepTime">
               </div>
@@ -28,20 +28,20 @@
                 <label for="vegetarian" class="form-label">Vegetarian</label>
                 <select class="form-control" id="vegetarian" name="vegetarian">
                   <option value="">--Please choose an option--</option>
-                    <option value="not">Not vegetarian</option>
-                    <option value="vegetarian">Vegetarian</option>
-                    <option value="optional">Optional</option>                    
+                    <option value="No">No</option>
+                    <option value="Yes">Yes</option>
+                    <option value="Optional">Optional</option>                    
                   </select>
               </div>
               <div class="mb-3">
                 <label for="vegan" class="form-label">Vegan</label>
                 <select class="form-control" id="vegan" name="vegan">
                   <option value="">--Please choose an option--</option>
-                    <option value="not">Not vegan</option>
-                    <option value="vegan">Vegan</option>
-                    <option value="optional">Optional</option>                    
+                    <option value="No">No</option>
+                    <option value="Yes">Yes</option>
+                    <option value="Optional">Optional</option>                    
                   </select>
-              </div> -->
+              </div>
               <div class="mb-3">
                 <label for="ingredients" class="form-label">Ingredients</label>
                 <textarea class="form-control" id="ingredients" name="ingredients"></textarea>
@@ -65,8 +65,12 @@
               <a href="/recipe/<%= recipes[i]._id%>">
                 <h2><%= recipes[i].name%></h2>
                 <img class="img-fluid" src="<%= recipes[i].image%>">
+                <p>Prep time: <%= recipes[i].prepTime%></p>
+                <p>Cooking time: <%= recipes[i].cookTime%></p>
+                <p>Vegetarian: <%= recipes[i].vegetarian%></p>
+                <p>Vegan: <%= recipes[i].vegan%></p>
                 <p><%= recipes[i].ingredients%></p>
-                <p><%= recipes[i].directions%></p>
+                <p><%= recipes[i].instructions%></p>
               </a>
             </li>
           <% } %>

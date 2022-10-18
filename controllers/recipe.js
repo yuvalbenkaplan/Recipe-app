@@ -30,6 +30,10 @@ module.exports = {
 
       await Recipe.create({
         name: req.body.name,
+        prepTime: req.body.prepTime,
+        cookTime: req.body.cookTime,
+        vegetarian: req.body.vegetarian,
+        vegan: req.body.vegan,
         image: result.secure_url,
         cloudinaryId: result.public_id,
         ingredients: req.body.ingredients,
