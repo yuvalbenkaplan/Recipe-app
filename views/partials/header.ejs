@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Recipes Only, No Stories!</title>
+    <title>Recipes Only, No Stories!</title>    
     <link
       rel="icon"
       type="image/png"
@@ -23,14 +23,22 @@
       integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w=="
       crossorigin="anonymous"
     />
-    <link rel="stylesheet" href="/css/style.css" />
+    <link rel="stylesheet" href="/css/header.css"/>    
   </head>
   <body>
-    <header class="container">
-      <div class="text-center">
-        <h1 class=""><a href="/profile">Your Profile</a></h1>
-        <span>Recipes Only, No Stories!</span>
-      </div>
+    <header>
+      <nav class="container">
+        <div>
+          <span class="navLink"><a href="/browse">Browse</a></span>
+          <span class="navLink"><a href="/favorites">Favorites</a></span>
+        </div>
+        <div class="text-center">
+          <span id="headerSpan">Recipes Only, No Stories!</span>
+        </div>
+        <div>
+          <span class="navLink"><a href="/logout">Logout</a></span>
+        </div>
+      </nav>
     </header>
   </body>
 </html>

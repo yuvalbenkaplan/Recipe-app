@@ -1,0 +1,30 @@
+body{
+    background-image: url(/images/bamboo-cutting-board-texture.jpg);
+}
+
+.container{
+    justify-content: space-between;
+    align-content: center;
+
+}
+
+.navLink{
+    background-color: #b10421ad;
+    border: solid, #b10421ad;
+    border-radius: 30%;
+}
+
+nav{
+    display: flex;
+    justify-content: space-between;
+    align-content: center;
+    flex-direction: row;
+    background-color: #053E18DE;
+    border: solid, #053E18DE;
+    border-radius: 10%;
+    
+}
+
+#headerSpan{
+    color: white;
+}

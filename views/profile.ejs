@@ -1,16 +1,10 @@
+<body>
 <%- include('partials/header') -%>
 <div class="container">
   <div class="row mt-5">
       <div class="col-6">
-          <div>
-              <p><strong>User Name</strong>: <%= user.userName %></p>
-              <p><strong>Email</strong>: <%= user.email %></p>
-              <a href="/browse" class="col-3 btn btn-primary">Browse recipes</a>
-              <a href="/favorites" class="col-3 btn btn-primary">Favorite recipes</a>
-              <a href="/logout" class="col-3 btn btn-primary">Logout</a>
-          </div>
           <div class="mt-5">
-            <h2>Add a recipe</h2>
+            <h2>Hello, <%= user.userName %>! Add a recipe below</h2>
             <form action="/recipe/createRecipe" enctype="multipart/form-data" method="POST">
               <div class="mb-3">
                   <label for="name" class="form-label">Recipe name</label>
@@ -59,6 +53,7 @@
           </div>
       </div>
       <div class="col-6">
+        <h2>Your recipes</h2>
         <ul class="row list-unstyled">
           <% for(var i=0; i<recipes.length; i++) {%>
             <li class="col-6 justify-content-between mt-5">
@@ -81,3 +76,4 @@
     </div>
   </div>
   <%- include('partials/footer') -%>
+</body>
