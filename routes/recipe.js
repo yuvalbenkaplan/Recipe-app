@@ -9,6 +9,8 @@ router.get("/:id", ensureAuth, recipesController.getRecipe);
 
 router.get("/favorites", ensureAuth, recipesController.getFavorites);
 
+router.get("/browse", ensureAuth, recipesController.getBrowse);
+
 //Enables user to create post w/ cloudinary for media uploads
 router.post("/createRecipe", upload.single("file"), recipesController.createRecipe);
 

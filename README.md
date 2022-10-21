@@ -14,18 +14,20 @@
 
 
 # Backend to add
-- browse page
 - search functionality
+- edit recipe
+- remove recipe from favorites
 
 # Backend added
 - basic MVC architecture, routes, controllers, and views
 - create recipe
 - add recipe to favorites
+- browse page
 
 # Frontend to add
 - styling
-- recipe details formatting
-- 
+- recipe details text formatting
+
 
 # Frontend added
 - profile

@@ -71,8 +71,6 @@ module.exports = {
       //Grabbing just the posts of the logged-in user
       const recipes = await Favorite.find({ user: req.user.id }).populate('recipe');
 
-      console.log(recipes)
-
       //Sending post data from mongodb and user data to ejs template
       res.render("favorites.ejs", { recipes: recipes, user: req.user });
     } catch (err) {
@@ -88,6 +86,18 @@ module.exports = {
       });
       console.log("Favorite has been added!");
       res.redirect(`/recipe/${req.params.id}`);
+    } catch (err) {
+      console.log(err);
+    }
+  },
+  getBrowse: async (req, res) => {
+    try {
+      //Since we have a session each request (req) contains the logged-in users info: req.user
+      //console.log(req.user) to see everything
+      //Grabbing just the posts of the logged-in user
+      const recipes = await Recipe.find({ user: req.user.id });
+      //Sending post data from mongodb and user data to ejs template
+      res.render("browse.ejs", { recipes: recipes, user: req.user });
     } catch (err) {
       console.log(err);
     }
