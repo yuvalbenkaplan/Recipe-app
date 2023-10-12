@@ -9,22 +9,32 @@ body{
 }
 
 .navLink{
-    background-color: #b10421ad;
-    border: solid, #b10421ad;
-    border-radius: 30%;
+    
+    color: white;
 }
 
 nav{
     display: flex;
     justify-content: space-between;
     align-content: center;
+    align-items: center;
     flex-direction: row;
+    height: 3em;
     background-color: #053E18DE;
     border: solid, #053E18DE;
-    border-radius: 10%;
     
+}
+
+a:link{
+    color: white;
+}
+
+a:hover{
+   color: blue; 
 }
 
 #headerSpan{
     color: white;
 }
+
+
